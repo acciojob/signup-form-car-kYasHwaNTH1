@@ -8,7 +8,7 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-	<form>
+	<form method="post">
 		<input type="text" required id="name" placeholder="Name" />
 	<input type="email" required id="email" placeholder="email" >
 		
@@ -23,22 +23,24 @@
 		<option disabled value=""  selected>Please choose an option</option>
 		<option value="BMW" >BMW</option>
 		<option value="Audi" >Audi</option>
-		<option value="Audi" >Tata</option>
+		<option value="Tata" >Tata</option>
 	</select>
 <label for="age">Age</label>
-		<input type="number" name="age" id="age" required min=0 max=120 placeholder="age">
+		<input type="number" name="age" id="age" required min="0" max="120" placeholder="age">
 
 
 	<label for="dob" >Date of birth</label>
 		<input id="dob" required type="date" />
 
 <label for="tel" >Phone Number</label>
-		<input type="tel"  id="tel" placeholder="xxx-xxx-xxxx" >
+		<input type="tel"  id="tel" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
 
 		<label for="password" >Password</label>
 		<input type="password" required id="password" placeholder="Password" >
 		<input type="checkbox" required id="tos" >
 		<label for="tos" >I agree to the TOS</label>
+
+		<button type="submit">Submit</button>
 	</form>
     <script type="text/javascript" src="./script.js">
 </script>
